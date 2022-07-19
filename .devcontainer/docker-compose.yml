@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: moneyapp-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: '256133'
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - "./mysql/init/:/docker-entrypoint-initdb.d/"
+      - "./mysql/config/:/etc/mysql/conf.d/"
+  app:
+    image: openjdk:17-jdk-buster
+    container_name: moneyapp-springboot
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/Users/suzukiti/dev/MoneyApp:/home"
+    command: /bin/bash
+    restart: always
+    tty: true
+    depends_on:
+      - "db"
