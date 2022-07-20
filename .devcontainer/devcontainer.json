@@ -11,7 +11,7 @@
     "formulahendry.vscode-mysql", // MYSQL
     "streetsidesoftware.code-spell-checker", // スペルミス防止
     "mhutchie.git-graph", // Git見やすく
-    "eamodio.gitlens-insiders", // Git見やすく
+    "eamodio.gitlens", // Git見やすく
     "oderwat.indent-rainbow", // インデントわかりやすく
     "mosapride.zenkaku" // 不必要なミス防止
   ]
