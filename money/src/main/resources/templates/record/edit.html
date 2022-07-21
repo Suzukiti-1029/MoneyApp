@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{record/layout/layout}">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" th:href="@{/css/stylesheet.css}" type="text/css">
-  <title>MoneyApp(仮)</title>
+  <meta charset="UTF-8" th:remove="tag">
 </head>
 
 <body>
-  <h1>Edit</h1>
+  <div layout:fragment="content">
+    <h1>Edit</h1>
+  </div>
 </body>
 
 </html>
