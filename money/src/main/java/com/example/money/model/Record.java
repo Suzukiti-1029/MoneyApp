@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,4 +27,15 @@ public class Record {
   private String note;
   private Date createdTimestamp;
   private Date updatedTimestamp;
+
+  @PrePersist
+  public void doPrePersist() {
+    setCreatedTimestamp(new Date());
+    setUpdatedTimestamp(new Date());
+  }
+
+  @PreUpdate
+  public void doPreUpdate() {
+    setUpdatedTimestamp(new Date());
+  }
 }
