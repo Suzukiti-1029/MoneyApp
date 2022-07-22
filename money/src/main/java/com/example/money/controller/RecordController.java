@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -35,8 +36,8 @@ public class RecordController {
     return "record/create";
   }
 
-  @GetMapping("/edit")
-  public String getEdit() {
+  @GetMapping("/edit/{id}")
+  public String getEdit(@PathVariable Long id) {
     return "record/edit";
   }
 
