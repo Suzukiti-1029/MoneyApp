@@ -3,9 +3,11 @@ package com.example.money.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.money.model.Record;
 import com.example.money.service.RecordService;
 
 import lombok.RequiredArgsConstructor;
@@ -23,7 +25,7 @@ public class RecordController {
   }
 
   @GetMapping("/add")
-  public String getAdd() {
+  public String getAdd(@ModelAttribute Record record) {
     return "record/add";
   }
 

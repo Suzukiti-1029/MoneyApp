@@ -12,27 +12,27 @@
 
     <a th:href="@{/record/index}">ホームに戻る</a>
 
-    <form th:action="@{/record/create}" method="post">
-      <input type="hidden" id="id" name="id">
+    <form th:action="@{/record/create}" th:object="${record}" method="post">
+      <input type="number" th:field="*{id}">
 
       <div>
         <label for="eventDate">日付</label>
-        <input type="date" id="eventDate" name="eventDate">
+        <input type="date" th:field="*{eventDate}">
       </div>
 
       <div>
         <label for="purpose">用途</label>
-        <input type="text" name="purpose" id="purpose">
+        <input type="text" th:field="*{purpose}">
       </div>
 
       <div>
         <label for="amount">金額(円)</label>
-        <input type="number" name="amount" id="amount">
+        <input type="number" th:field="*{amount}">
       </div>
 
       <div>
         <label for="note">メモ</label>
-        <input type="text" name="note" id="note">
+        <input type="text" th:field="*{note}">
       </div>
 
       <button type="submit">保存</button>
