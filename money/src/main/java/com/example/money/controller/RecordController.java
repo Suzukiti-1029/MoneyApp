@@ -50,6 +50,7 @@ public class RecordController {
 
   @GetMapping("/delete/{id}")
   public String getDelete(@PathVariable Long id) {
+    recordService.deleteOneRecord(id);
     return "record/delete";
   }
 }

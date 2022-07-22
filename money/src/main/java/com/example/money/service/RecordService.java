@@ -25,4 +25,8 @@ public class RecordService {
   public void getOneRecord(Long id, Model model) {
     model.addAttribute("record", recordRepository.findById(id));
   }
+
+  public void deleteOneRecord(Long id) {
+    recordRepository.deleteById(id);
+  }
 }
