@@ -21,10 +21,10 @@ public class Record {
   private Long id;
 
   private Date eventDate;
-  private int amount;
   private String purpose;
-  private int balance;
+  private int amount;
   private String note;
+  private int balance;
   private Date createdTimestamp;
   private Date updatedTimestamp;
 
