@@ -48,8 +48,8 @@ public class RecordController {
     return "record/update";
   }
 
-  @GetMapping("/delete")
-  public String getDelete() {
+  @GetMapping("/delete/{id}")
+  public String getDelete(@PathVariable Long id) {
     return "record/delete";
   }
 }

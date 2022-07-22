@@ -34,7 +34,7 @@
           <td th:text="*{note}"></td>
           <td th:text="*{balance}"></td>
           <td><a th:href="@{/record/edit/{id}(id=*{id})}">編集</a></td>
-          <td><a th:href="@{/record/delete}">削除</a></td>
+          <td><a th:href="@{/record/delete/{id}(id=*{id})}">削除</a></td>
         </tr>
       </tbody>
     </table>
