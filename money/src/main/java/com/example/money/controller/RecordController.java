@@ -33,8 +33,8 @@ public class RecordController {
     return "record/update";
   }
 
-  @PostMapping("/delete")
-  public String postDelete() {
+  @GetMapping("/delete")
+  public String getDelete() {
     return "record/delete";
   }
 }
