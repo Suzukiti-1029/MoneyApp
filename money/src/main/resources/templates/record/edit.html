@@ -9,6 +9,34 @@
 <body>
   <div layout:fragment="content">
     <h1>Edit</h1>
+
+    <a th:href="@{/record/index}">ホームに戻る</a>
+
+    <form th:action="@{/record/update}" method="post">
+      <input type="hidden" id="id" name="id">
+
+      <div>
+        <label for="eventDate">日付</label>
+        <input type="date" id="eventDate" name="eventDate">
+      </div>
+
+      <div>
+        <label for="purpose">用途</label>
+        <input type="text" name="purpose" id="purpose">
+      </div>
+
+      <div>
+        <label for="amount">金額(円)</label>
+        <input type="number" name="amount" id="amount">
+      </div>
+
+      <div>
+        <label for="note">メモ</label>
+        <input type="text" name="note" id="note">
+      </div>
+
+      <button type="submit">保存</button>
+    </form>
   </div>
 </body>
 
