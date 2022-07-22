@@ -9,6 +9,45 @@
 <body>
   <div layout:fragment="content">
     <h1>Index</h1>
+
+    <a th:href="@{/record/add}">登録</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>日付</th>
+          <th>用途</th>
+          <th>金額(円)</th>
+          <th>メモ</th>
+          <th>残金(円)</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>07/22(金)</td>
+          <td>テスト</td>
+          <td>-1,000</td>
+          <td>メモ</td>
+          <td>99,000</td>
+          <td><a th:href="@{/record/edit}">編集</a></td>
+          <td><a th:href="@{/record/delete}">削除</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>07/22(金)</td>
+          <td>テスト2</td>
+          <td>2,000</td>
+          <td></td>
+          <td>101,000</td>
+          <td><a th:href="@{/record/edit}">編集</a></td>
+          <td><a th:href="@{/record/delete}">削除</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 
