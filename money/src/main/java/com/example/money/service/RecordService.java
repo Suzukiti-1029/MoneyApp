@@ -18,7 +18,7 @@ public class RecordService {
     model.addAttribute("records", recordRepository.findAll());
   }
 
-  public void insertNewRecord(@ModelAttribute Record record) {
+  public void saveRecord(@ModelAttribute Record record) {
     recordRepository.save(record);
   }
 

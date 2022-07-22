@@ -32,7 +32,7 @@ public class RecordController {
 
   @PostMapping("/create")
   public String postCreate(@ModelAttribute Record record) {
-    recordService.insertNewRecord(record);
+    recordService.saveRecord(record);
     return "record/create";
   }
 
@@ -43,7 +43,8 @@ public class RecordController {
   }
 
   @PostMapping("/update")
-  public String postUpdate() {
+  public String postUpdate(@ModelAttribute Record record) {
+    recordService.saveRecord(record);
     return "record/update";
   }
 
