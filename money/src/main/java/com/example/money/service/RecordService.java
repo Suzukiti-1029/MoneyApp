@@ -21,5 +21,8 @@ public class RecordService {
   public void insertNewRecord(@ModelAttribute Record record) {
     recordRepository.save(record);
   }
-  
+
+  public void getOneRecord(Long id, Model model) {
+    model.addAttribute("record", recordRepository.findById(id));
+  }
 }

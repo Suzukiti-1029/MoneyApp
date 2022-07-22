@@ -37,7 +37,8 @@ public class RecordController {
   }
 
   @GetMapping("/edit/{id}")
-  public String getEdit(@PathVariable Long id) {
+  public String getEdit(@PathVariable Long id, Model model) {
+    recordService.getOneRecord(id, model);
     return "record/edit";
   }
 
