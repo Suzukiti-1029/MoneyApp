@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,7 +23,9 @@ public class Record {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @DateTimeFormat(iso = ISO.DATE)
   private Date eventDate;
+
   private String purpose;
   private int amount;
   private String note;
