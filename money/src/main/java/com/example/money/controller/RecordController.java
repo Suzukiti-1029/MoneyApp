@@ -30,7 +30,8 @@ public class RecordController {
   }
 
   @PostMapping("/create")
-  public String postCreate() {
+  public String postCreate(@ModelAttribute Record record) {
+    recordService.insertNewRecord(record);
     return "record/create";
   }
 
